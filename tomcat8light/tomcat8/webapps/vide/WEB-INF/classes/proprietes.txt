@@ -1,0 +1,3 @@
+url=jdbc:odbc:postgreSQL35W
+nom=alaerm
+mdp=moi
