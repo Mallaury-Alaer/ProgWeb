@@ -1,0 +1,66 @@
+DELETE FROM terrain;
+DELETE FROM abonne;
+DROP TABLE IF EXISTS terrain CASCADE;
+DROP TABLE IF EXISTS abonne CASCADE;
+DROP TABLE IF EXISTS creneau CASCADE;
+DROP TABLE IF EXISTS reserve CASCADE;
+
+create table terrain(
+       tno int,
+       tnom text,
+       type text,
+       constraint pK_terrain primary Key(tno));
+
+create table abonne(
+       ano int,
+       nom text,
+       prenom text,
+       dateNaiss date,
+       adresse text,
+       dateFinAbo date,
+       parrain int,
+       constraint pK_abonne primary Key(ano),
+       constraint fK_abonne foreign Key(parrain)
+       		  references abonne(ano)
+		  on update cascade);
+
+create table creneau(
+       jour int,
+       heure int,
+       constraint pK_creneau primary Key(jour, heure));
+
+create table reserve(
+       ano int,
+       tno int,
+       jour int,
+       heure int,
+       partenaire int,
+       constraint pK_reserve primary Key(ano, tno, jour, heure, partenaire),
+       constraint fK_creneau foreign Key(jour, heure)
+       references creneau(jour, heure)
+       on update cascade,
+       constraint fK_terrain foreign Key(tno)
+       references terrain(tno)
+       on update cascade,
+       constraint fK_abonne foreign Key(ano)
+       references abonne(ano)
+       on update cascade,
+       constraint fK_abonne2 foreign Key(partenaire)
+       references abonne(ano)
+       on update cascade);
+       
+		 
+insert into terrain values (1, 'T1', 'Tennis');
+insert into terrain values (2, 'S1', 'Squash');
+insert into terrain values (3, 'B3', 'Badminton');
+
+insert into abonne values (1, 'Massio', 'Enrico', '1996-06-12', 'Inconnue', '2016-12-31');
+insert into abonne values (2, 'Who', 'Doctor', '2005-10-04', 'TARDIS', '2016-11-12',1);
+insert into abonne values (3, 'Snow', 'John', '2013-05-02', 'Winterfell', '2016-09-08',2);
+
+insert into creneau values (06, 14);
+insert into creneau values (13, 08);
+insert into creneau values (21, 20);
+
+insert into reserve values (2,2,06,14,3);
+insert into reserve values (1,3,13,08,3);
