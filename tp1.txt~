@@ -1,0 +1,24 @@
+create table terrain(
+       tno int,
+       tnom text,
+       type text,
+       constraint pK_terrain primaryKey(tno));
+
+create table abonne(
+       ano int,
+       nom text,
+       prenom text,
+       dateNaiss date,
+       adresse text,
+       dateFinAbo date,
+       parrain int,
+       constraint pK_abonne primaryKey(ano),
+       constraint fK_abonne foreignKey(parrain)
+       		  references abonne(ano)
+		  on update cascade);
+
+create table creneau(
+       jour int,
+       heure int,
+       constraint pK-creneau primaryKey(jour, heure));
+

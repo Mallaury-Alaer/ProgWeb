@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS personne;
+DROP TABLE IF EXISTS produits;
+
+CREATE TABLE personne(
+      id integer,
+      nom text,
+      prenom text,
+      CONSTRAINT pK_personne primary key(id));
+
+CREATE TABLE produits(
+      id integer,
+      libelle text,
+      prix integer,
+      poid integer,
+      couleur text,
+      CONSTRAINT pK_produits primary key(id));
+
+INSERT INTO personne VALUES(1, 'Snow', 'Jon');
+INSERT INTO personne VALUES(2, 'Potter', 'Harry');
+INSERT INTO personne VALUES(3, 'Who', 'Doctor');
+INSERT INTO personne VALUES(4, 'Holmes', 'Sherlock');
+INSERT INTO personne VALUES(5, 'Leroux', 'Quentin');
+
+INSERT INTO produits VALUES(1, 'chaise', 10, 10, 'rouge');
+INSERT INTO produits VALUES(2, 'chaise', 10, 10, 'bleu');
+INSERT INTO produits VALUES(3, 'chaise', 10, 10, 'vert');
+INSERT INTO produits VALUES(4, 'chaise', 10, 10, 'jaune');
+INSERT INTO produits VALUES(5, 'table', 30, 20, 'rouge');

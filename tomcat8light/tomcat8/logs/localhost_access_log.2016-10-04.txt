@@ -88,3 +88,12 @@
 0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:37:53 +0200] "GET /vide/servlet/ListerA?tri=nationalite&sens=desc HTTP/1.1" 200 1527
 0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:37:53 +0200] "GET /vide/servlet/ListerA?tri=annee&sens=asc HTTP/1.1" 200 1533
 0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:37:54 +0200] "GET /vide/servlet/ListerA?tri=nom&sens=desc HTTP/1.1" 200 1527
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:14 +0200] "GET /vide/servlet/ListerA?tri=nom&sens=asc HTTP/1.1" 200 1533
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:14 +0200] "GET /vide/servlet/ListerA?tri=nom&sens=desc HTTP/1.1" 200 1527
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:44 +0200] "GET /vide/servlet/ListerA?tri=nationalite&sens=asc HTTP/1.1" 200 1533
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:46 +0200] "GET /vide/servlet/ListerA?tri=nationalite&sens=desc HTTP/1.1" 200 1527
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:47 +0200] "GET /vide/servlet/ListerA?tri=nationalite&sens=asc HTTP/1.1" 200 1533
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:48 +0200] "GET /vide/servlet/ListerA?tri=nationalite&sens=desc HTTP/1.1" 200 1527
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:51 +0200] "GET /vide/servlet/ListerA?tri=nationalite&sens=asc HTTP/1.1" 200 1533
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:44:52 +0200] "GET /vide/servlet/ListerA?tri=nationalite&sens=desc HTTP/1.1" 200 1527
+0:0:0:0:0:0:0:1 - - [04/Oct/2016:16:47:10 +0200] "GET /vide/servlet/Select HTTP/1.1" 200 207

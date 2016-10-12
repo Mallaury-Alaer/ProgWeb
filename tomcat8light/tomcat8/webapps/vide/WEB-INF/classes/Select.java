@@ -21,10 +21,10 @@ public class Select extends HttpServlet{
 			Statement stmt;
 		
 			// enregistrement du driver
-			//Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+			Class.forName("org.postgresql.Driver");
 		
 			// connexion à la base
-			String url = "jdbc:odbc:postgreSQL35W";
+			String url = "jdbc:postgresql://psqlserv/n3p1";
 			String nom = "alaerm";
 			String mdp = "moi";
 			con = DriverManager.getConnection(url,nom,mdp);
