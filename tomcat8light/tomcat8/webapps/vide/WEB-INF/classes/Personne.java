@@ -13,7 +13,13 @@ public class Personne extends HttpServlet{
 		PrintWriter out = res.getWriter();
 		res.setContentType( "text/html" );
 		out.println("<!doctype html>");
-		out.println("<head><title>Personnes</title></head><body><center> ");
+		out.println("<head>");
+		out.println("<meta charset=\"utf-8\">");
+		out.println("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");
+		out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+		out.println("<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">");
+		out.println("<title>Personnes</title>");
+		out.println("</head><body><center> ");
 		out.println("<h1>Personnes:</h1>");
 		
 		try{
@@ -33,7 +39,7 @@ public class Personne extends HttpServlet{
 			String query = "select ID,NOM,PRENOM from PERSONNE";
 			ResultSet rs = stmt.executeQuery(query);
 		
-			out.println("<TABLE BORDER=\"1\">");
+			out.println("<table border=1 class=\"table-centered table-hover table-condensed\">");
 			out.println("<TR><TH>ID</TH><TH>Nom</TH><TH>Prenom</TH></TR>");
 		
 			while(rs.next()){
@@ -42,7 +48,7 @@ public class Personne extends HttpServlet{
 				out.println("</TR>");
 			}
 			
-			con.close();
+			 con.close();
 			
 			out.println("</TABLE>");
 			out.println("</body></html> ");

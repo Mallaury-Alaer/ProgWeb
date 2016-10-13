@@ -27,8 +27,8 @@ public class Select extends HttpServlet{
 			String url = "jdbc:postgresql://psqlserv/n3p1";
 			String nom = "alaerm";
 			String mdp = "moi";
-			con = DriverManager.getConnection(url,nom,mdp);
-		
+			con = DriverManager.getConnection(url,nom,mdp);	
+	
 			stmt = con.createStatement();
 			String query = "select NOM,PRENOM,AGE from CLIENTS";
 			ResultSet rs = stmt.executeQuery(query);
