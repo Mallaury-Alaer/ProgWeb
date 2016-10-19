@@ -43,3 +43,7 @@
 0:0:0:0:0:0:0:1 - - [19/Oct/2016:16:43:24 +0200] "GET /vide/servlet/Select?table=personne HTTP/1.1" 200 874
 0:0:0:0:0:0:0:1 - - [19/Oct/2016:16:43:33 +0200] "POST /vide/servlet/Insert HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [19/Oct/2016:16:43:33 +0200] "GET /vide/servlet/Select?table=personne HTTP/1.1" 200 927
+0:0:0:0:0:0:0:1 - - [19/Oct/2016:16:50:56 +0200] "GET /vide/servlet/Select HTTP/1.1" 200 4952
+0:0:0:0:0:0:0:1 - - [19/Oct/2016:16:51:20 +0200] "GET /vide/servlet/Select?table=personne HTTP/1.1" 200 1223
+0:0:0:0:0:0:0:1 - - [19/Oct/2016:16:51:38 +0200] "POST /vide/servlet/Insert HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Oct/2016:16:51:39 +0200] "GET /vide/servlet/Select?table=personne HTTP/1.1" 200 1275
