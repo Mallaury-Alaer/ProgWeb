@@ -1,0 +1,15 @@
+drop table if exists personne cascade;
+
+create table personne(
+	login text,
+	mdp text,
+	nom text,
+	prenom text,
+	adresse text,
+	email text,
+	tel text,
+	datenaiss text,
+	constraint pK_personne primary Key(login));
+
+
+insert into personne values('pablo', '123', 'Escobar', 'Pablo', 'Colombie', 'pablo.escobar@carteldemedellin.coke', '0000000000', '01/12/1949');

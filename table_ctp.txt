@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS salles CASCADE;
+
+CREATE TABLE salles(
+	nom text,
+	taille text,
+	chaises text,
+	portes text,
+	fenetres text, 
+	ip text,
+	dat text,
+	constraint pK_salles primary Key(nom));
+ 

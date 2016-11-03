@@ -29,7 +29,7 @@ public class Select extends HttpServlet{
 	
 	out.println("<title>Table "+ table +"</title></head><body><center> ");
 	out.println("<h1>Contenu de la table : "+ table +"</h1>");
-		
+
 	try{
 	    Connection con=null;
 	    Statement stmt;
@@ -93,6 +93,13 @@ public class Select extends HttpServlet{
 	}catch(Exception e){
 	    out.println(e.getMessage());
 	}
+	/*
+	finally{
+	    try{
+		con.close();
+	    }catch(Exception e){}
+	}
+	*/
 		
     }
 }
