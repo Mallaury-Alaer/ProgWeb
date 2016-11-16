@@ -1,0 +1,7 @@
+test -e /home/public/admin/bashrc && . /home/public/admin/bashrc
+
+export CLASSPATH=$CLASSPATH:.:/home/infoetu/alaerm/bdd3/tomcat8light/tomcat8/lib/servlet-api.jar:postgresql-9.3-1102.jdbc41.jar
+
+export http_proxy=http://cache.univ-lille1.fr:3128
+export HTTPS_PROXY=https://cache.univ-lille1.fr:3128
+~                                                         
