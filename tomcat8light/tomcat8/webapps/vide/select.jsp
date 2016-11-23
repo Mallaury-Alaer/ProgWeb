@@ -1,8 +1,10 @@
 <!DOCTYPE HTLM>
 <HTML>
 	<%@page import="java.sql.*"%>
+	<%@ page pageEncoding="UTF-8"%>
+	<%@ page import = "metier.Personne" %>
 	<HEAD>
-		<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<META http-equiv="Content-Type" content="text/html">
 			<TITLE>Test Select</TITLE>
 		</HEAD>
 		<BODY>
@@ -17,6 +19,17 @@
 				ResultSet rs = stmt.executeQuery(query);
 				ResultSetMetaData rsmd = rs.getMetaData();
 				int nbCols = rsmd.getColumnCount();
+				%>
+
+
+
+				<H1>Compteur</H1>
+
+				<%! 
+					Personne p = new Personne();
+				%>
+				<%
+				out.println(p.toString());
 				%>
 
 				<H1>Table <%= table%></H1>
