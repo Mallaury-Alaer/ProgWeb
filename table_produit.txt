@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS produit CASCADE;
+CREATE TABLE produit( ref integer, libelle text, description text, urlImage text, prixht integer, constraint pk_produit primary key(ref));
+
+insert into produit values(1, 'Chaise','Objet a 4 pieds contenant une surface pour se poser', 'http://www.ikea.com/fr/fr/images/products/stefan-chaise-noir__0122106_PE278491_S4.JPG', 19 );
+insert into produit values(2, 'Tapis', 'Objet utile pour inviter ses amis a dormir', 'http://www.ikea.com/fr/fr/images/products/lappljung-ruta-tapis-poils-ras-noir__0185490_PE337503_S4.JPG', 99 );
+insert into produit values (3, 'Enfant', 'Etre jamais satisfait, qui pleure trop souvent', 'http://www.ikea.com/ms/fr_FR/media/assortiment/enfant/seo_image/b%C3%A9b%C3%A9__bebe_250x250.jpg', -666);
+insert into produit values (4, 'Poubelle', 'Pour se debarasser de l enfant', 'http://www.ikea.com/fr/fr/images/products/strapats-poubelle-a-pedale__0190618_PE344042_S4.JPG', 20);
+insert into produit values(5, 'Lampadaire', 'Fourni de la lumiere', 'http://www.ikea.com/fr/fr/images/products/stranne-lampadaire-a-led__0104082_PE250747_S4.JPG', 89 );

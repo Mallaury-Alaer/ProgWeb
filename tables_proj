@@ -1,0 +1,35 @@
+DROP TABLE IF EXISTS Personne, Justificatif, Absences;
+
+CREATE TABLE Personne(
+pno integer, 
+type varchar(10) check(type = 'Professeur' OR type = 'Eleve' OR type = 'Secretaire'),
+login varchar(15),
+mdp varchar(15),
+nom varchar(15), 
+constraint pk_Personne primary key(pno));
+
+CREATE TABLE Justificatif(
+jno integer,
+pno int, 
+datedeb date not null check(datedeb<=datefin), 
+datefin date not null check(datefin>=datedeb), 
+raison varchar(100), 
+constraint pk_Justificatif primary key(jno),
+constraint fk_Justificatif foreign key(pno) references Personne(pno));
+
+CREATE TABLE Absences(
+ano integer,
+jno int,
+pno int,
+dat date not null, 
+duree integer default 2, 
+constraint pk_Absences primary key(ano),
+constraint fk_Absences foreign key(jno) references Justificatif(jno),
+constraint fk_Absences2 foreign key(pno) references Personne(pno));
+
+insert into Personne values (1,'Eleve', 'PabloE', 'testeleve', 'Escobar');
+insert into Personne values (2,'Professeur', 'WalterW', 'testprof', 'White');
+insert into Personne values (3,'Secretaire', 'Catherine', 'testsecretaire', 'Catherine');
+
+insert into Absences(ano,pno,dat) values (1,1,'01/01/2016');
+insert into justificatif values (3,1,'01/01/2016','01/01/2016', 'Malade');
